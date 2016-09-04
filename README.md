@@ -1,0 +1,1 @@
+# Basic Frontend boilerplate project with npm scripts 
