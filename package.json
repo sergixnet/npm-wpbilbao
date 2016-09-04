@@ -1,0 +1,16 @@
+{
+  "name": "npm-wpbilbao",
+  "version": "0.0.1",
+  "description": "Basic frontend boilerplate project with npm scripts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "frontend",
+    "npm",
+    "boilerplate"
+  ],
+  "author": "Sergio Peña",
+  "license": "MIT"
+}
