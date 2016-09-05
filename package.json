@@ -4,7 +4,7 @@
   "description": "Basic frontend boilerplate project with npm scripts",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "scss": "node-sass -o dist/css src/scss --output-style compressed"
   },
   "keywords": [
     "frontend",
@@ -12,5 +12,8 @@
     "boilerplate"
   ],
   "author": "Sergio Peña",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "node-sass": "^3.8.0"
+  }
 }
