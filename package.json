@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "scss": "node-sass -o dist/css src/scss --output-style compressed",
-    "pug": "pug src/pug/*.pug --out dist -P"
+    "pug": "pug src/pug/*.pug --out dist -P",
+    "postcss": "postcss -c config-postcss.json",
+    "build:css": "npm run scss && npm run postcss"
   },
   "keywords": [
     "frontend",
@@ -15,7 +17,9 @@
   "author": "Sergio Peña",
   "license": "MIT",
   "devDependencies": {
+    "autoprefixer": "^6.4.1",
     "node-sass": "^3.8.0",
+    "postcss-cli": "^2.6.0",
     "pug-cli": "^1.0.0-alpha6"
   }
 }

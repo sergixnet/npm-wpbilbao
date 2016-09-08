@@ -7,3 +7,16 @@ body {
 	background-color: $gray;
 	color: $white;
 }
+
+.box {
+	display: flex;
+}
+
+@keyframes animar {
+	0% {
+		width: 20px;
+	},
+	100% {
+		width: 300px;
+	}
+}
