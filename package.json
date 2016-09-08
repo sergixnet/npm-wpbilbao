@@ -4,7 +4,8 @@
   "description": "Basic frontend boilerplate project with npm scripts",
   "main": "index.js",
   "scripts": {
-    "scss": "node-sass -o dist/css src/scss --output-style compressed"
+    "scss": "node-sass -o dist/css src/scss --output-style compressed",
+    "pug": "pug src/pug/*.pug --out dist -P"
   },
   "keywords": [
     "frontend",
@@ -14,6 +15,7 @@
   "author": "Sergio Peña",
   "license": "MIT",
   "devDependencies": {
-    "node-sass": "^3.8.0"
+    "node-sass": "^3.8.0",
+    "pug-cli": "^1.0.0-alpha6"
   }
 }
