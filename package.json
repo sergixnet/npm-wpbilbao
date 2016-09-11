@@ -9,7 +9,8 @@
     "build:pug": "pug src/pug/*.pug --out dist -P",
     "build:css": "npm run scss && npm run postcss",
     "build:js": "babel src/js --out-dir dist/js",
-    "build:images": "imagemin src/images/**/* -o dist/images"
+    "build:images": "imagemin src/images/**/* -o dist/images",
+    "build": "npm run build:pug && npm run build:css && npm run build:js && npm run build:images && echo BUILD OK"
   },
   "keywords": [
     "frontend",
