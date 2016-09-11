@@ -8,7 +8,8 @@
     "postcss": "postcss -c config-postcss.json",
     "build:pug": "pug src/pug/*.pug --out dist -P",
     "build:css": "npm run scss && npm run postcss",
-    "build:js": "babel src/js --out-dir dist/js"
+    "build:js": "babel src/js --out-dir dist/js",
+    "build:images": "imagemin src/images/**/* -o dist/images"
   },
   "keywords": [
     "frontend",
@@ -21,6 +22,7 @@
     "autoprefixer": "^6.4.1",
     "babel-cli": "^6.14.0",
     "babel-preset-es2015": "^6.14.0",
+    "imagemin-cli": "^3.0.0",
     "node-sass": "^3.8.0",
     "postcss-cli": "^2.6.0",
     "pug-cli": "^1.0.0-alpha6"
