@@ -10,7 +10,12 @@
     "build:css": "npm run scss && npm run postcss",
     "build:js": "babel src/js --out-dir dist/js",
     "build:images": "imagemin src/images/**/* -o dist/images",
-    "build": "npm run build:pug && npm run build:css && npm run build:js && npm run build:images && echo BUILD OK"
+    "build": "npm run build:pug && npm run build:css && npm run build:js && npm run build:images && echo BUILD OK",
+    "watch:css": "onchange 'src/scss/**/*.scss' -- npm run build:css",
+    "watch:pug": "onchange 'src/pug/**/*.pug' -- npm run build:pug",
+    "watch:js": "onchange 'src/js/**/*.js' -- npm run build:js",
+    "watch:images": "onchange 'src/images/**/*' -- npm run build:images",
+    "watch": "parallelshell 'npm run watch:css' 'npm run watch:pug' 'npm run watch:js' 'npm run watch:images'"
   },
   "keywords": [
     "frontend",
@@ -25,6 +30,8 @@
     "babel-preset-es2015": "^6.14.0",
     "imagemin-cli": "^3.0.0",
     "node-sass": "^3.8.0",
+    "onchange": "^3.0.2",
+    "parallelshell": "^2.0.0",
     "postcss-cli": "^2.6.0",
     "pug-cli": "^1.0.0-alpha6"
   }
