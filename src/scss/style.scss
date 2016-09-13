@@ -2,21 +2,25 @@
 
 $gray: #cccccc;
 $white: #ffffff;
+$red: #ff0000;
 
 body {
-	background-color: $gray;
-	color: $white;
+  background-color: $gray;
+  color: $white;
 }
 
 .box {
-	display: flex;
+  background-color: $white;
+  color: $red;
+  display: flex;
 }
 
 @keyframes animar {
-	0% {
-		width: 20px;
-	},
-	100% {
-		width: 300px;
-	}
+  0% {
+    width: 20px;
+  }
+
+  100% {
+    width: 300px;
+  }
 }

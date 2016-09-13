@@ -17,7 +17,10 @@
     "watch:images": "onchange 'src/images/**/*' -- npm run build:images",
     "watch": "parallelshell 'npm run watch:css' 'npm run watch:pug' 'npm run watch:js' 'npm run watch:images'",
     "serve": "browser-sync start --server dist --files dist",
-    "dev": "parallelshell 'npm run watch' 'npm run serve'"
+    "dev": "parallelshell 'npm run watch' 'npm run serve'",
+    "lint:scss": "sass-lint src/**/*.scss -c -v",
+    "lint:js": "eslint src/js/**/*.js",
+    "lint": "npm run lint:scss && npm run lint:js"
   },
   "keywords": [
     "frontend",
@@ -29,6 +32,7 @@
   "devDependencies": {
     "autoprefixer": "^6.4.1",
     "babel-cli": "^6.14.0",
+    "babel-eslint": "^6.1.2",
     "babel-preset-es2015": "^6.14.0",
     "browser-sync": "^2.15.0",
     "imagemin-cli": "^3.0.0",
@@ -36,6 +40,7 @@
     "onchange": "^3.0.2",
     "parallelshell": "^2.0.0",
     "postcss-cli": "^2.6.0",
-    "pug-cli": "^1.0.0-alpha6"
+    "pug-cli": "^1.0.0-alpha6",
+    "sass-lint": "^1.9.1"
   }
 }
