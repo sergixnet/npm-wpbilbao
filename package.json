@@ -20,7 +20,8 @@
     "dev": "parallelshell 'npm run watch' 'npm run serve'",
     "lint:scss": "sass-lint src/**/*.scss -c -v",
     "lint:js": "eslint src/js/**/*.js",
-    "lint": "npm run lint:scss && npm run lint:js"
+    "lint": "npm run lint:scss && npm run lint:js",
+    "validate": "npm ls"
   },
   "keywords": [
     "frontend",
@@ -40,7 +41,9 @@
     "onchange": "^3.0.2",
     "parallelshell": "^2.0.0",
     "postcss-cli": "^2.6.0",
+    "precommit-hook": "^3.0.0",
     "pug-cli": "^1.0.0-alpha6",
     "sass-lint": "^1.9.1"
-  }
+  },
+  "pre-commit": ["lint"]
 }
